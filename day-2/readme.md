@@ -132,6 +132,7 @@ kubectl port-forward service/prometheus-operated -n monitoring 9090:9090
 kubectl port-forward service/monitoring-grafana -n monitoring 8080:80
 ```
 For fetching the initial admin password
+
 ```kubectl get secret --namespace monitoring monitoring-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo```
 
 - **Alertmanager UI**:
